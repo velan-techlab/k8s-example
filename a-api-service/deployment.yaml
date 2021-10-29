@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: a-api-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: a-api-app
+  template:
+    metadata:
+      labels:
+        app: a-api-app
+    spec:
+      containers:
+      - name: a-api-app
+        image: velantechlab/appservice:v1
+        imagePullPolicy: Always
+        command: ["java","-jar","/app/app-service-1.0.jar"]
+        #command: ["/bin/sh"]
+        #args: ["-c", "while true; do echo hello; sleep 10;done"]        
+        ports:
+        - containerPort: 8080
+        env: 
+        - name: SPRING_CONFIG_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: a-app-config
+              key: spring.config.name
+        - name: SPRING_CONFIG_LOCATION
+          valueFrom:
+            configMapKeyRef:
+              name: a-app-config
+              key: spring.config.location
+        volumeMounts:
+        - name: app-config-vol
+          mountPath: /app/config
+      volumes:
+      - name: app-config-vol
+        configMap: 
+          name: a-app-config
+          items:
+          - key: application.yaml
+            path: application.yaml

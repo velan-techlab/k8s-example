@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: a-app-config
+data:
+  spring.config.name: application
+  spring.config.location: file:///app/config/application.yaml
+  application.yaml: |
+    app:
+      name: A
+      version: v1
+      service:
+        suffix: -api-service
+    spring:
+      cloud:
+        loadbalancer:
+          ribbon:
+            enable: false
