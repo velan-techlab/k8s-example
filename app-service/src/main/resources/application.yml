@@ -1,0 +1,10 @@
+app:
+  name: A
+  version: v1
+  service:
+    suffix: -api-service
+spring:
+  cloud:
+    loadbalancer:
+      ribbon:
+        enable: false
