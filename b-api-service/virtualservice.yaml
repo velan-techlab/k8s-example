@@ -1,0 +1,20 @@
+kind: VirtualService
+apiVersion: networking.istio.io/v1alpha3
+metadata:
+  name: b-api-service
+spec:
+  hosts:
+    - b-api-service
+  http:
+    - match:
+        - headers:
+            x-env-is-test-user:
+              exact: 'yes'
+      route:
+        - destination:
+            host: b-api-service
+            subset: v2
+    - route:
+        - destination:
+            host: b-api-service
+            subset: v1

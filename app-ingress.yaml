@@ -13,6 +13,6 @@ spec:
             pathType: ImplementationSpecific
             backend:
               service:
-                name: a-api-service
+                name: api-gateway-service
                 port: 
                   number: 80
