@@ -26,6 +26,12 @@ public class AppController {
     @Value("${app.service.suffix}")
     String suffixServiceName;
 
+    @Value("${app.isOrginService:false}")
+    Boolean isOrginService;
+
+
+
+
     @Autowired AppServiceCall appServiceCall;
 
     @PostConstruct
@@ -34,10 +40,21 @@ public class AppController {
         log.info("App Name {}",appName);
         log.info("AppVersion {}",appVersion);
         log.info("AppServiceSuffix {}",suffixServiceName);
+        log.info("Orgin app {}",isOrginService);
     }
 
     @GetMapping("/{routeString}")
     public String app(@PathVariable("routeString") String routeString) throws MalformedURLException {
+
+        if(isOrginService)
+        {
+            String routeService = routeString.charAt(0)+"";
+            String uriStr = "http://"+routeService+suffixServiceName;
+            log.info("Orgin Service Internal service call {}, routeString {} ",uriStr,routeString);
+            //resultcurrentService += this.app(passRouteString);
+            return appServiceCall.callAppService(URI.create(uriStr),routeString);
+            //resultcurrentService += appServiceCall.callAppService(URI.create("http://localhost:8080"),passRouteString);
+        }
         String passRouteString = "";
         String routeService= "";
         log.info("route String : {}",routeString);

@@ -1,8 +1,10 @@
 app:
   name: A
   version: v1
+  isOrginService : true
   service:
     suffix: -api-service
+
 spring:
   cloud:
     loadbalancer:
