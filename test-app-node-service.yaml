@@ -7,6 +7,6 @@ spec:
   selector:
     app: a-api-app
   ports:
-    - protocol: TCP  
+    - protocol: TCP
       port: 80
       targetPort: 8080

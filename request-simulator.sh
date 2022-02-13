@@ -11,7 +11,7 @@ do
 	#curl http://micro-world.com/BC; echo; sleep 0.5;
 	#curl http://micro-world.com/CA; echo; sleep 0.5;
 	#curl http://micro-world.com/CB; echo; sleep 0.5;
-	curl http://micro-world.com/ABC; echo; sleep 0.5;
+	#curl http://micro-world.com/ABC; echo; sleep 0.5;
 	#curl http://micro-world.com/ACB; echo; sleep 0.5;
 	#curl http://micro-world.com/CBA; echo; sleep 0.5;
 	#curl http://micro-world.com/CAB; echo; sleep 0.5;
