@@ -1,0 +1,3 @@
+id,iam_role_name,iam_assume_role,iam_role_instance_profile_creation_enabled,iam_instance_profile_name,policy_ids,apply
+capp-ssm-role,capp-ssm-role,./assume_role/ec2-assume-role.json,true,bhost-cpp-iam-prof,iampoli-capp-ssm;iampoli-capp-gets3object,yes
+

@@ -1,0 +1,4 @@
+naclname,vpcname,subnetnames,apply
+nacl-capp-web,capp-vpc,capp-web-subnet-01;capp-web-subnet-02,yes
+nacl-capp-app,capp-vpc,capp-app-subnet-01;capp-app-subnet-02,yes
+nacl-capp-data,capp-vpc,capp-data-subnet-01;capp-data-subnet-02,yes

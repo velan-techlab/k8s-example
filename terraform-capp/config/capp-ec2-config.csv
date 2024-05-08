@@ -1,0 +1,2 @@
+id,category,required_ami,required_instance_type,associate_public_ip_address,subnet_id,key_name,monitoring,private_ip,ebs_optimized,hibernation,iam_instance_profile,instance_initiated_shutdown_behavior,build_user_data_enabled,user_data_source,vpc_security_group_ids,apply
+bhost,bastion,ami-07a6e3b1c102cdba8,t2.micro,false,capp-web-subnet-01,,,,,,bhost-cpp-iam-prof,,,./userdata/bhost-userdata.tpl,sgrp-capp-bhost,yes

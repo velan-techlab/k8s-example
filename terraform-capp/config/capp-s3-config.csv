@@ -1,0 +1,2 @@
+id,bucket_name,force_destroy,versioning_enabled,apply
+capps3-software-backup-store1,capps3-software-backup-store1,false,true,yes

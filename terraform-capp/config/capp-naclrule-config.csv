@@ -1,0 +1,17 @@
+id,naclname,rule_number,egress,protocol,rule_action,cidr_block,from_port,to_port,Remarks,apply
+1,nacl-capp-web,100,FALSE,6,Allow,10.0.1.0/25,0,65535,allow 443 bhost <- vpce,no
+2,nacl-capp-web,200,FALSE,6,Allow,10.0.1.128/25,0,65535,allow 443 bhost <- vpce,no
+3,nacl-capp-web,300,TRUE,6,Allow,10.0.1.0/25,0,65535,allow emph port bhost -> vpce,no
+4,nacl-capp-web,400,TRUE,6,Allow,10.0.1.128/25,0,65535,allow emph port bhost -> vpce,no
+5,nacl-capp-web,500,FALSE,-1,Allow,0.0.0.0/0,0,65535,"allow all port",yes
+6,nacl-capp-web,600,TRUE,-1,Allow,0.0.0.0/0,0,65535,"allow all port",yes
+7,nacl-capp-app,100,FALSE,6,Allow,10.0.0.0/27,0,65535,allow 443 vpce <- bhost,no
+8,nacl-capp-app,200,FALSE,6,Allow,10.0.0.32/27,0,65535,allow 443 vpce <- bhost,no
+9,nacl-capp-app,300,TRUE,6,Allow,10.0.0.0/27,0,65535,allow emph port vpce -> bhost,no
+10,nacl-capp-app,400,TRUE,6,Allow,10.0.0.32/27,0,65535,allow emph port vpce -> bhost,no
+11,nacl-capp-app,500,FALSE,-1,Allow,0.0.0.0/0,0,65535,"allow all port",yes
+12,nacl-capp-app,600,TRUE,-1,Allow,0.0.0.0/0,0,65535,"allow all port",yes
+13,nacl-capp-data,100,FALSE,6,Allow,10.0.0.0/27,3306,3306,"allow incoming 3306 for db ",yes
+14,nacl-capp-data,200,TRUE,6,Allow,10.0.0.0/27,0,65535,"allow incoming 3306 for db ",yes
+15,nacl-capp-data,300,FALSE,6,Allow,10.0.0.32/27,3306,3306,"allow incoming 3306 for db ",yes
+16,nacl-capp-data,400,TRUE,6,Allow,10.0.0.32/27,0,65535,"allow outgoing traffice for db ",yes

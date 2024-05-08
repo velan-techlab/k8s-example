@@ -1,0 +1,5 @@
+id,name,vpcname,endpoint_creation,service_name,endpoint_type,auto_accept_connection,private_dns_enabled,subnet_ids,security_group_ids,route_table_ids,apply
+ssm-endpoint-01,ssm-endpoint-01,capp-vpc,TRUE,com.amazonaws.ap-southeast-1.ssm,Interface,TRUE,TRUE,capp-app-subnet-01,sgrp-capp-ssm-vpce,,yes
+ssm-endpoint-02,ssm-endpoint-02,capp-vpc,TRUE,com.amazonaws.ap-southeast-1.ssmmessages,Interface,TRUE,TRUE,capp-app-subnet-01,sgrp-capp-ssm-vpce,,yes
+ssm-endpoint-03,ssm-endpoint-02,capp-vpc,TRUE,com.amazonaws.ap-southeast-1.ec2messages,Interface,TRUE,TRUE,capp-app-subnet-01,sgrp-capp-ssm-vpce,,yes
+s3-gatewayendpoint,s3-gatewayendpoint,capp-vpc,TRUE,com.amazonaws.ap-southeast-1.s3,Gateway,TRUE,FALSE,,,capp-web-route,yes

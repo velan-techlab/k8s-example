@@ -1,0 +1,2 @@
+id,db_name,identifier,allocated_storage,db_engine,engine_version,instance_class,username,password,parameter_group_name,skip_final_snapshot,db_subnet_group_names,security_group_names,apply
+cappdb,cappdb,capp-db,10,mysql,8.0.35,db.t3.micro,cappmasteruser,password,default.mysql8.0,TRUE,capp-data-subnet-01;capp-data-subnet-02,sgrp-capp-db,yes

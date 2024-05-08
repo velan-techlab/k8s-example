@@ -1,0 +1,4 @@
+securitygroupname,vpcname,description,revokerulesondelete,tags,apply
+sgrp-capp-bhost,capp-vpc,"security gruop for bhost",FALSE,"{""Name"":""sgrp-capp-bhost""}",yes
+sgrp-capp-ssm-vpce,capp-vpc,"security group for ssm-vpce",FALSE,"{""Name"":""sgrp-capp-ssm-vpce""}",yes
+sgrp-capp-db,capp-vpc,"security group for database",FALSE,"{""Name"":""sgrp-capp-db""}",yes

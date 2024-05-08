@@ -1,0 +1,2 @@
+name,cidr,instance_tenancy,dns_hostnames,dns_support
+capp-vpc,10.0.0.0/20,default,true,true

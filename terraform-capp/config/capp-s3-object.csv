@@ -1,0 +1,7 @@
+id,bucket_name,bucket_key,object_source,apply
+1,capps3-software-backup-store1,mysql-client-cli/mysql-community-client-8.3.0-1.el9.x86_64.rpm,../software-setup/mysql-community-client-8.3.0-1.el9.x86_64.rpm,yes
+2,capps3-software-backup-store1,mysql-client-cli/mysql-community-client-plugins-8.3.0-1.el9.x86_64.rpm,../software-setup/mysql-community-client-plugins-8.3.0-1.el9.x86_64.rpm,yes
+3,capps3-software-backup-store1,mysql-client-cli/mysql-community-libs-8.3.0-1.el9.x86_64.rpm,../software-setup/mysql-community-libs-8.3.0-1.el9.x86_64.rpm,yes
+4,capps3-software-backup-store1,mysql-client-cli/mysql-community-common-8.3.0-1.el9.x86_64.rpm,../software-setup/mysql-community-common-8.3.0-1.el9.x86_64.rpm,yes
+
+

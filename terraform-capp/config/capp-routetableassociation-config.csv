@@ -1,0 +1,7 @@
+routetablename,subnetname
+capp-web-route,capp-web-subnet-01
+capp-web-route,capp-web-subnet-02
+capp-app-route,capp-app-subnet-01
+capp-app-route,capp-app-subnet-02
+capp-data-route,capp-data-subnet-01
+capp-data-route,capp-data-subnet-02

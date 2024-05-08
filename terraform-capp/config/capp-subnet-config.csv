@@ -1,0 +1,7 @@
+name,cidr,availabilityzone,vpcname
+capp-web-subnet-01,10.0.0.0/27,ap-southeast-1a,capp-vpc
+capp-web-subnet-02,10.0.0.32/27,ap-southeast-1b,capp-vpc
+capp-app-subnet-01,10.0.1.0/25,ap-southeast-1a,capp-vpc
+capp-app-subnet-02,10.0.1.128/25,ap-southeast-1b,capp-vpc
+capp-data-subnet-01,10.0.2.0/26,ap-southeast-1a,capp-vpc
+capp-data-subnet-02,10.0.2.64/26,ap-southeast-1b,capp-vpc

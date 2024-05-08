@@ -1,0 +1,20 @@
+name,value,description
+s3_bucket_config,../config/capp-s3-config.csv,s3 bucket
+s3_object_config,../config/capp-s3-object.csv,s3 object 
+iam_policy_config,../config/capp-iam-policy-config.csv,iam policy
+iam_role_config,../config/capp-iam-role-config.csv,iam role
+vpc_config,../config/capp-vpc-config.csv,vpc config
+subnet_config,../config/capp-subnet-config.csv,subnet config
+routetable_config,../config/capp-routetable-config.csv,routetable config
+routetableassociation_config,../config/capp-routetableassociation-config.csv,routetable config
+routetablerule_config,../config/capp-routetablerule-config.csv,routetable rule config
+network_acl_config,../config/capp-nacl-config.csv,nacl config
+network_acl_config_rule_config,../config/capp-naclrule-config.csv, nacl rule config
+vpc_endpont_config,../config/capp-vpc-endpoint-config.csv,vpc endpoint config
+security_group_config,../config/capp-security-group-config.csv, security group config
+security_group_rule_config,../config/capp-security-group-rule-config.csv, security group rule config
+ec2_config,../config/capp-ec2-config.csv, ec2 config
+rds_config,../config/capp-rds-config.csv, rds config
+
+
+

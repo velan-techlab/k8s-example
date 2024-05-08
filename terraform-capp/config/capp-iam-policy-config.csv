@@ -1,0 +1,3 @@
+id,name,policy,description,apply
+iampoli-capp-ssm,iampoli-capp-ssm,./iam_policy/iampoli-capp-ssm.json, ssm access,yes
+iampoli-capp-gets3object,iampoli-capp-gets3object,./iam_policy/iampoli-capp-gets3object.json,get object from s3,yes

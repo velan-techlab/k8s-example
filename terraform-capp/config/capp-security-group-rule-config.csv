@@ -1,0 +1,9 @@
+security_group_rule_name,security_group_name,type,from_port,to_port,protocol,cidr_blocks,source_security_group_name,prefix_lists_ids,target_self_enabled,description,apply
+sgrp-capp-bhost-01,sgrp-capp-bhost,ingress,0,65535,TCP,,sgrp-capp-ssm-vpce,,,"allow incoming https traffic from ssm-vpce",yes
+sgrp-capp-ssm-vpce-01,sgrp-capp-ssm-vpce,ingress,0,65535,TCP,,sgrp-capp-bhost,,,"allow incoming https traffic from bhost",yes
+sgrp-capp-bhost-02,sgrp-capp-bhost,egress,0,65535,TCP,,sgrp-capp-ssm-vpce,,,"allow incoming https traffic from ssm-vpce",yes
+sgrp-capp-bhost-03,sgrp-capp-bhost,egress,0,65535,TCP,,,pl-6fa54006,,"allow incoming https traffic from ssm-vpce",yes
+sgrp-capp-bhost-04,sgrp-capp-bhost,egress,3306,3306,TCP,,sgrp-capp-db,,,"allow incoming https traffic from ssm-vpce",yes
+sgrp-capp-ssm-vpce-02,sgrp-capp-ssm-vpce,egress,0,65535,TCP,,sgrp-capp-bhost,,,"allow incoming https traffic from bhost",yes
+sgrp-capp-db-01,sgrp-capp-db,ingress,3306,3306,TCP,10.0.0.0/27,,,,allow incoming traffic on 3306,yes
+sgrp-capp-db-02,sgrp-capp-db,ingress,3306,3306,TCP,10.0.0.32/27,,,,allow incoming traffic on 3306,yes
